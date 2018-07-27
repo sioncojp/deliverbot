@@ -1,10 +1,11 @@
 package main
 
 import (
-	"github.com/blang/semver"
-	"howett.net/plist"
 	"io/ioutil"
 	"strconv"
+
+	"github.com/blang/semver"
+	"howett.net/plist"
 )
 
 const (

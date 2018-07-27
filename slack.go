@@ -1,11 +1,12 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
-	"github.com/nlopes/slack"
 	"log"
 	"strings"
-	"encoding/json"
+
+	"github.com/nlopes/slack"
 )
 
 const (
