@@ -17,7 +17,7 @@ dist: build-cross ## create .tar.gz linux & darwin to /bin
 	cd bin && tar zcvf $(darwin_name).tar.gz $(darwin_name) && rm -f $(darwin_name)
 
 build: ## go build
-	go build -o bin/$(name) $(LDFLAGS) cmd/$(name)/*.go
+	go build -o bin/$(name) $(LDFLAGS) *.go
 
 test: ## go test
 	go test -v $$(go list ./... | grep -v /vendor/)
@@ -40,7 +40,7 @@ clean: ## remove bin/*
 	rm -f bin/*
 
 run: ## go run
-	go run cmd/$(name)/main.go -c examples/config.toml
+	go run main.go -c examples/config.toml
 
 help:
 	@awk -F ':|##' '/^[^\t].+?:.*?##/ { printf "\033[36m%-22s\033[0m %s\n", $$1, $$NF }' $(MAKEFILE_LIST)

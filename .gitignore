@@ -78,3 +78,5 @@ fabric.properties
 .idea/httpRequests
 
 
+!.gitkeep
+bin/
